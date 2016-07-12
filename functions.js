@@ -307,3 +307,26 @@ MEG NEM JO!!!!
 /*Function - checkTrueValues
 Write a function that takes an Array with any number of type Boolean values and write a for loop to call our isTrue function with each value as input and return true if all values return true from our isTrue function.*/
 
+var booArray = [true, true, true, false];
+// var status2;
+var status3;
+
+function checkTrueValues (array1) {
+  for (var i = 0; i < array1.length; i++) {
+    console.log(array1[i]);
+    if (isTrue(array1[i]) === false) {
+      status3 = false;
+    }else{
+      status3 = true;
+    }
+  }
+  return status3;
+}
+
+
+console.log("is each element true in the array? ", checkTrueValues(booArray));
+
+
+
+
+
