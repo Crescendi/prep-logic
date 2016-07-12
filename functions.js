@@ -30,10 +30,13 @@ Our for loop is made up of 3 parts: 1. Variable initialization 2. Termination co
 In Human: While our variable i is less than the size of our Array retrieve each element in the Array. At the end of each loop add 1 to the current value of i.*/
 
 var lotteryNumbers = [0, 23, 12, 55, 2, 44, 65];
-for(var i = 0; i < lotteryNumbers; i++){
+  for(var i = 0; i < lotteryNumbers.length; i++){
   var currentLotteryNumber = lotteryNumbers[i];
-  checkWinningNumber(currentLotteryNumber);
-}
+  console.log("lottery number ", i, " ", currentLotteryNumber);
+
+  }
+
+
 
 function makeCrazyLongString(string){
   var outputString = "";
@@ -207,7 +210,6 @@ function looptoNumber(limit) {
 
 looptoNumber(5);
 
-
 /*Function - showEachValue
 Write a function that takes in a Array value named characters that has a sequence of single character String values and have the function write a for loop that loops for each number of elements in the Array and console.log each character as the loop executes.*/
 
@@ -232,12 +234,12 @@ function createArrayFromString (word) {
     if (currentLetter !== "A" && currentLetter !== "a") {
       ArrayFromString.push(currentLetter);
     }
-    console.log(ArrayFromString);
+    // console.log(ArrayFromString);
   }
-
+  return ArrayFromString;
 }
 
-createArrayFromString("Aranyos");
+console.log("No A array from a word", createArrayFromString("Aranyos"));
 
 
 //     console.log(word.length);  egy string hossza
@@ -245,12 +247,61 @@ createArrayFromString("Aranyos");
 //     ArrayFromString.push(word.charAt(i));  xxx.push hozzaad egy stringet az array vegehez es megnoveli a hosszat
 //     console.log(ArrayFromString);
 
+
 /*Function - greatSummator
 Write a function that takes an Array with any number of type Number and write a for loop to add all numbers in the Array and return the sum.*/
+
+var numArray = [2,4,6,8,10];
+var sum1 = 0;
+
+function greatSummator(array1) {
+  for (var i = 0; i < array1.length; i++) {
+    sum1 += array1[i];
+    // console.log(total);
+  }
+  return sum1;
+}
+
+console.log("Total of elements of an Array ", greatSummator(numArray));
 
 
 /*Function - totalUnderWhatFor
 Write a function that takes an Array with any number of type Number and second variable called total. Return true if the sum of all values in the Array are less than total otherwise return false.*/
+
+// var numArray = [2,4,6,8,10];
+// var sum1 = 0;
+var total = 10;
+var status;
+
+function totalUnderWhatFor (array1) {
+  greatSummator(array1);
+  if (sum1 < total) {
+    status = true;
+  }else{
+    status = false;
+  }
+  return status
+}
+
+console.log ("sum of array is less than total? ", totalUnderWhatFor(numArray));
+
+/*
+version : total as a parameter
+
+MEG NEM JO!!!! 
+
+// function totalUnderWhatFor2 (array1,total1) {
+//   greatSummator(array1);
+//   console.log(sum1);
+//   if (sum1 < total1) {
+//     status = true;
+//   }else{
+//     status = false;
+//   }
+//   return status
+// }
+
+// console.log ("give a total, sum of array is less than total? ", totalUnderWhatFor(numArray,20));
 
 
 /*Function - checkTrueValues
